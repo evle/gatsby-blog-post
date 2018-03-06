@@ -1,6 +1,6 @@
 {
   "name": "gatsby-blog-post",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "",
   "main": "blog.js",
   "scripts": {
