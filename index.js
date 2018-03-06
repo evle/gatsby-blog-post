@@ -33,6 +33,6 @@ fs.mkdir(dir, (err) => {
 const title = dirName.split('-');
 
 fs.writeFile(`${dir}/index.md`,
-    `---\ntitle: "${title.join(' ')}"\ndate: "${currentDate.slice(0,10)}"\nlayout: post\ndraft: false\npath: "/posts/"\ncategory: ""\ntags:\n  - \ndescription: ""\n---`, (err) => {
+    `---\ntitle: "${title.join(' ')}"\ndate: "${currentDate.slice(0,10)}"\nlayout: post\ndraft: false\npath: "/posts/${dirName}"\ncategory: ""\ntags:\n  - \ndescription: ""\n---`, (err) => {
         if (err) throw err;
     })
