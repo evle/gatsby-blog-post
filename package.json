@@ -1,0 +1,19 @@
+{
+  "name": "gatsby-blog-post",
+  "version": "1.0.6",
+  "description": "",
+  "main": "blog.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "gatsby-blog-post": "./index.js"
+  },
+  "keywords": [],
+  "author": "evle",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^2.14.1",
+    "moment": "^2.21.0"
+  }
+}
