@@ -23,7 +23,7 @@ const dirName = process.argv[2];
 const currentDate = moment().format();
 
 const dir = `src/pages/articles/${currentDate.slice(0,10)}---${dirName}`;
-fs.mkdir(dir, (err) => {
+fs.mkdirSync(dir, (err) => {
     if (err) {
         console.log(`The article ${dirName} already exits.`);
         process.exit(1);
@@ -32,7 +32,7 @@ fs.mkdir(dir, (err) => {
 
 const title = dirName.split('-');
 
-fs.writeFile(`${dir}/index.md`,
+fs.writeFileSync(`${dir}/index.md`,
     `---\ntitle: "${title.join(' ')}"\ndate: "${currentDate.slice(0,10)}"\nlayout: post\ndraft: false\npath: "/posts/${dirName}"\ncategory: ""\ntags:\n  - \ndescription: ""\n---`, (err) => {
         if (err) throw err;
     })
